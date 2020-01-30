@@ -22,24 +22,29 @@
 
 <style lang="scss" scoped>
 .container {
-  height: 100vh;
+  min-height: 100vh;
   width: 70%;
   margin: 0 auto;
   text-align: right;
   line-height: 1.5rem;
-  padding: 2rem;
+  padding: 1rem;
   h1 {
     text-align: center;
+    font-size:2vw;
+    margin-bottom: 5rem;
+
   }
   p {
-    font-size: 1.4rem;
-    margin: 0 auto;
-    padding: 1rem;
+    font-size:1.5vw;
+    // margin: 0 auto;
+    margin-bottom: 3rem;
+
   }
   span {
-    line-height: 1.5rem;
-    font-size: 1.4rem;
+    font-size:1.5vw;
+    line-height: 1rem;
     color: rgb(42, 202, 238);
+    margin-bottom: 1rem;
   }
   .box {
     margin: 0 auto;
@@ -47,5 +52,22 @@
       float: left;
     }
   }
+
+  @media (max-width: 768px) {
+    h1 {
+    text-align: center;
+    font-size:5vw;
+    margin-bottom: 5rem;
+  }
+   p {
+    font-size:3vw;
+  }
+  span {
+    font-size:4vw;
+    line-height: 1rem;
+    color: rgb(42, 202, 238);
+    margin-bottom: 1rem;
+  }
+}
 }
 </style>

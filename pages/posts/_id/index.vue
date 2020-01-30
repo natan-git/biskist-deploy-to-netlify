@@ -43,20 +43,20 @@ export default {
 
 
 <style scoped>
-.single-post-page {
-  padding: 30px;
-  text-align: center;
-  background-color: #00CECE;
-}
+
 
 .post {
-  width: 70%;
-  margin: 0 auto;
-  background-color: rgb(52, 52, 52);
-  color: white;
-  padding: 3rem;
+  text-align: center;
+  /* width: 70%; */
+  /* margin: 0 auto; */
+  background-color: rgb(236, 236, 236);
+  color: rgb(47, 47, 47);
   font-size: 1.4rem;
   line-height: 2rem;
+}
+
+.post p{
+  font-size:1vw;
 }
 
 @media (max-width: 768px) {
@@ -64,6 +64,9 @@ export default {
     width: 90%;
     margin: auto;
   }
+  .post p{
+  font-size:4vw;
+}
 }
 
 .post-title {
@@ -73,7 +76,6 @@ export default {
 .post-details {
   padding: 10px;
   box-sizing: border-box;
-  /* border-bottom: 3px solid #ccc; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,10 +93,7 @@ export default {
   margin: 0 10px;
 }
 
-.post-feedback a:hover,
-.post-feedback a:active {
-  color: salmon;
-}
+
 
 .post-content {
   width: 80%;
