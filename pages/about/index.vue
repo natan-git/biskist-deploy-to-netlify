@@ -44,8 +44,8 @@
 }
 
 .about-us img {
-  width: 42rem;
-  height: 40rem;
+  width: 40%;
+  height: 40%;
 }
 
 .affiliates {
