@@ -1,9 +1,23 @@
 <template>
   <div class="question-content">
     <p>{{ question }}</p>
-    <p v-if="isShow">{{ answer }}</p>
-    <img v-if="isArrow" class="read-more-icon" @click="showAnswer" src="@/assets/img/read-more-icon.svg" alt />
-    <img v-if="!isArrow" class="read-more-icon" @click="showAnswer" src="@/assets/img/arrow-up.svg" alt />
+    <transition name="slide-fade">
+        <p v-if="isShow">{{ answer }}</p>
+    </transition>
+    <img
+      v-if="isArrow"
+      class="read-more-icon"
+      @click="showAnswer"
+      src="@/assets/img/read-more-icon.svg"
+      alt
+    />
+    <img
+      v-if="!isArrow"
+      class="read-more-icon"
+      @click="showAnswer"
+      src="@/assets/img/arrow-up.svg"
+      alt
+    />
   </div>
 </template>
 
@@ -34,11 +48,7 @@ export default {
       isArrow: true
     };
   },
-  computed: {
-    postLink() {
-      return this.isAdmin ? "/admin/" + this.id : "/questions/" + this.id;
-    }
-  },
+  computed: {},
   methods: {
     showAnswer() {
       this.isShow = !this.isShow;
@@ -50,14 +60,26 @@ export default {
 
 
 <style scoped>
-.question-content{
+.question-content {
   padding: 1rem;
   border-bottom: 2px rgb(39, 172, 238) solid;
 }
 
-.read-more-icon{
+.read-more-icon {
   float: left;
   width: 1rem;
-  height:1rem;
+  height: 1rem;
 }
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to{
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
 </style>

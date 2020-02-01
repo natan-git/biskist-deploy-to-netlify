@@ -35,8 +35,7 @@ export default {
 
 
 <style  scoped>
-
-h1{
+h1 {
   text-align: center;
 }
 .questions-and-answers-page {
@@ -45,4 +44,11 @@ h1{
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .questions-and-answers-page {
+    width: 100%;
+    min-height: 100vh;
+    /* margin: 0 auto; */
+  }
+}
 </style>
