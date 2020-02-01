@@ -21,11 +21,22 @@
         <p>info@biskits.co.il :כתובת דוא״ל</p>
         <p>טלפון: 072-3900269</p>
         <p>בן יהודה 218 תל אביב -יפו</p>
-        <a href="https://www.facebook.com/biskitos/" target="_blank"><img class="icon" src="@/assets/img/social-media-icons/facebook.svg" alt /></a>
-        <a href="https://www.linkedin.com/company/biskits/" target="_blank"><img class="icon" src="@/assets/img/social-media-icons/linkedin.svg" alt /></a>
-        <a href="mailto:info@biskits.co.il?Subject=" target="_top"><img class="icon" src="@/assets/img/social-media-icons/mail.svg" alt /></a>
+        <a href="https://www.facebook.com/biskitos/" target="_blank">
+          <img class="icon" src="@/assets/img/social-media-icons/facebook.svg" alt />
+        </a>
+        <a href="https://www.linkedin.com/company/biskits/" target="_blank">
+          <img class="icon" src="@/assets/img/social-media-icons/linkedin.svg" alt />
+        </a>
+        <a href="mailto:info@biskits.co.il?Subject=" target="_top">
+          <img class="icon" src="@/assets/img/social-media-icons/mail.svg" alt />
+        </a>
       </div>
     </div>
+
+    <div class="admin">
+      <nuxt-link to="/admin">Admin</nuxt-link>
+    </div>
+
     <p class="Copyright">Copyright © 2019 Biskits technologies. All rights reserved</p>
   </div>
 </template>
@@ -38,6 +49,12 @@ export default {
 </script>
 
 <style scoped>
+.admin {
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: none;
+}
+
 .footer-container {
   background-color: rgb(66, 66, 66);
   min-height: 15rem;
@@ -87,8 +104,7 @@ h2 {
 @media (max-width: 850px) {
   .box-container {
     flex-direction: column;
-    align-items: center
-
+    align-items: center;
   }
   .left-box p {
     display: none;
@@ -98,6 +114,10 @@ h2 {
   }
   .right-box {
     text-align: center;
+  }
+  .admin {
+    text-align: center;
+    display: block;
   }
 }
 </style>
